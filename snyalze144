@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>@snyalze — Соцсети</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 30px;
+      animation: slideDown 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    .socials {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    a.button {
+      text-decoration: none;
+      color: #fff;
+      background: #1f1f1f;
+      padding: 15px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      font-size: 1.2em;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 1s ease forwards;
+    }
+
+    a.button:nth-child(1) { animation-delay: 1.0s; }
+    a.button:nth-child(2) { animation-delay: 1.2s; }
+    a.button:nth-child(3) { animation-delay: 1.4s; }
+
+    a.button:hover {
+      background: #333;
+      transform: scale(1.05);
+    }
+
+    audio {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(-20px); }
+    }
+
+    @keyframes slideUp {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(20px); }
+    }
+
+    @media (max-width: 500px) {
+      h1 { font-size: 2em; }
+      .container { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>@snyalze</h1>
+
+    <div class="socials">
+      <a class="button" href="https://t.me/snyalze" target="_blank">📲 Telegram</a>
+      <a class="button" href="https://www.tiktok.com/@iwnl.7" target="_blank">🎥 TikTok</a>
+      <a class="button" href="#" onclick="alert('Discord: snyalze'); return false;">🎮 Discord</a>
+    </div>
+  </div>
+
+  <audio autoplay loop>
+    <source src="calm-music.mp3" type="audio/mpeg" />
+    Ваш браузер не поддерживает аудио.
+  </audio>
+</body>
+</html>
